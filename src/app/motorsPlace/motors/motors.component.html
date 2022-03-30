@@ -1,0 +1,81 @@
+
+
+<header> <h1 id="title">Vipers' Inventory</h1>
+
+    <h2 id= "sub-title" > Check the Best and Latest Motorcycle Models
+    </h2>
+  </header>
+  
+  
+  <body>
+  
+  <div class="imagee">
+    <img src='/assets/searchIcon.png' class ="imgg">
+    <input type="text"  id="myInput" placeholder="Search for funds.." [(ngModel)]="term">
+  
+      </div>
+
+
+      <div class="grid-container" id="gridContainer" >
+
+        <table class="info-table">
+            <tr>
+
+            <th tabindex ="0" role="button" scope ="col"> 
+                <p> ID</p>
+            </th>
+            <th tabindex ="0" role="button" scope ="col"> 
+                <p> VIN</p>
+            </th>
+
+            <th tabindex ="0" role="button" scope ="col"> 
+                <p> Make</p>
+            </th>
+
+            <th tabindex ="0" role="button" scope ="col"> 
+                <p> Type</p>
+            </th>
+
+            <th>
+                <p>E/D</p>
+             </th>
+
+
+            </tr>
+            <tr  *ngFor="let motor of motors | filter:term">
+                <td>
+                     {{motor.id}}
+                </td>
+                <td>
+                  <a [routerLink]="['/motors', motor.id]"> {{motor.vin}}</a>
+                </td>
+                <td>
+                    {{motor.make}}
+                </td>
+                <td>
+                    {{motor.type}}
+                </td>
+               
+
+                <td>
+                <div class= ".ie-container">
+                  <div class= "invest-delete">
+                    <img src='/assets/purchase.png' class="investImg"  [routerLink]="['/motors/', motor.id, 'create']">
+                  <div>
+                    Purchase
+                  </div>
+                </div>
+                <div class= "invest-delete">
+                  <img src='/assets/delete.png' class="deleteImg"  (click) = "deleteMotors(motor.id)">
+                <div>
+                  Delete
+                    </div>
+                    </div>
+                  </div>
+                </td>
+                
+            </tr>
+            
+        </table> 
+
+      </div>

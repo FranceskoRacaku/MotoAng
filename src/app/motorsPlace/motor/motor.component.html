@@ -1,0 +1,43 @@
+<body>
+    
+<!-- Motors -->
+ <title> {{motor.make}}</title>
+
+ <div class="main-motor">
+     <!-- main motor -->
+     <div class="motor-info">
+         <!-- motor info  -->
+         <div class="motor-info-right">
+             <!-- <img class="image-one"src="./assets/" alt="image"> -->
+             <div class="bond-info-left">
+                 <h3> Information </h3>
+                 <hr>
+                 <p> Id - {{motor.id}}</p>
+                 <hr>
+                 <p> VIN - {{motor.vin}}</p>
+                 <hr>
+                 <p> Make - {{motor.make}}</p>
+                 <hr>
+                 <p> Type - {{motor.type}} </p>
+                 <hr>
+                 <button mat-raised-button class="invest-btn" (click) = "edit()">
+                  Edit
+                  </button>
+                  <button mat-raised-button class="back-btn" routerLink="/motors">
+                      Go Back
+                  </button>
+                  <div class= "invest-delete">
+
+                     <a (click)="purchase()" class="investImg">
+                         Purchase Funds
+                     </a>
+                   <div>
+                     Start Invest
+                   </div>
+                  </div>
+              </div>
+          </div>
+         </div>
+         
+ </div>
+ </body>
