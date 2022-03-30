@@ -18,6 +18,8 @@ export class MotorsComponent implements OnInit {
 
     collection = {};
     term: string = '';
+
+    
     motors:Motor[] = [];
 
 

@@ -25,7 +25,7 @@ export class MotorService {
   
   updateMotors(motor: Motor): Observable<any>{
     
-    return this.http.put(`https://motoinventory.herokuapp.com/motors/${motor.id}`, motor);
+    return this.http.patch(`https://motoinventory.herokuapp.com/motors/${motor.id}`, motor);
   }
 
 

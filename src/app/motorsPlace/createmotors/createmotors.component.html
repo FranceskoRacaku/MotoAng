@@ -1,1 +1,18 @@
-<p>createmotors works!</p>
+<body>
+    
+
+    <div class ="motorsedit">
+    <div class = "center" id = "centerText" id ="text">
+        <label>VIN: </label>
+        <input [(ngModel)] ="createMotor.vin" id ="inputText" type = "text" value = "" placeholder="e.g. (CC3344532)"/>
+         <label>Make: </label>
+        <input [(ngModel)] ="createMotor.make" id ="inputText" type = "text" value = "" placeholder="e.g. (Toyota)"/>
+        <label>Type: </label>
+         <input [(ngModel)] ="createMotor.type" id ="inputText" type = "text" value = "" placeholder="e.g. (xxx)"/>
+        <div id="button_div">
+    <button (click) = "createMotors(createMotor)" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Create</button> 
+    <button id = "wrapper" class="shadow" value="Shadow" routerLink ='/motors'>Go Back</button>
+    </div>
+    </div>
+    
+    </div></body>

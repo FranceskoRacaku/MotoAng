@@ -10,6 +10,7 @@ import { MotorComponent } from './motorsPlace/motor/motor.component';
 import { MotorsComponent } from './motorsPlace/motors/motors.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppRoutingModule,
     FormsModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
