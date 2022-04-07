@@ -1,0 +1,27 @@
+
+<body>
+    
+
+    <div class ="fundsedit">
+
+    <div class = "center" id = "centerText" id ="text">
+        
+        <label>Name: </label>
+        <input [(ngModel)] ="createUser.userName" id ="inputText" type = "text" value = "" placeholder="e.g. (James Brown)"/>
+         <label>Email: </label>
+        <input [(ngModel)] ="createUser.userEmail" id ="inputText" type = "text" value = "" placeholder="e.g. (jamesbrown23@gmail.com)"/>
+        <label>Age: </label>
+         <input [(ngModel)] ="createUser.userAge" id ="inputText" type = "number" value = "" placeholder="e.g. (24)"/>
+
+        <div id="button_div">
+    <button (click) = "createUsers(createUser)" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Create</button> 
+    <button id = "wrapper" class="shadow" value="Shadow" routerLink ='/users'>Go Back</button>
+    </div>
+    <div class="button_div">
+        <a routerLink="/users/login"
+          >Have an account? Login!</a
+        >
+      </div>
+    </div>
+    
+    </div></body>

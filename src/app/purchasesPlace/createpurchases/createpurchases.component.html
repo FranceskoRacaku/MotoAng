@@ -1,0 +1,53 @@
+<body>
+    
+    
+    <div class ="motorsedit">
+        
+        <div class = "center" id = "centerText" id ="text">
+
+            <p>Purchasing:</p>
+            <title> {{motor.make}}</title>
+             <h1 class="motorid">ID: {{motor.id}}</h1>
+            <hr>
+            <!-- ID: <input [(ngModel)] ="motor.id" id ="inputText" type = "text" value = "" placeholder="e.g. (John Smith)"/> -->
+
+            <div class="boxy">
+                <div class="inputWrapper">
+
+                    <label>VIN: </label>
+                    <input [(ngModel)] ="motor.vin" id ="inputText" disabled/>
+                    <label>Make: </label>
+                    <input [(ngModel)] ="motor.make" id ="inputText" disabled/>
+                    <label>Type: </label>
+                    <input [(ngModel)] ="motor.type" id ="inputText" disabled/>
+
+                    
+                    
+                </div>
+
+
+                    <img src='/assets/plain-arrow.png' class="investImg">
+                <div class="outputWrapper">
+
+                    <!-- <div class = "center" id = "centerText" id ="text2"> -->
+                        
+                        <p>Amount Investing:</p>
+                        
+                        <label>Amount: </label>
+                        <input [(ngModel)] ="createPurchase.amount" id ="inputText" type = "number" value = "" placeholder="e.g. (255)"/>
+                        <label>Motor ID: </label>
+                        <input [(ngModel)] ="createPurchase.motorId" id ="inputText" type = "number" value = {{motor.id}}  disabled/>
+                        <label>User ID: </label>
+                        <input [(ngModel)] ="createPurchase.userId"  id ="inputText" type = "number" value = "" />
+                        
+                        <div id="button_div">
+                            <button (click) = "createPurchases(createPurchase)" id = "wrapper" class="shadow" value="Shadow">Buy</button> 
+                            <button id = "wrapper" class="shadow" value="Shadow" routerLink ='/motors'>Go Back</button>
+                            
+                        </div>
+                    </div>
+                        <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</body>

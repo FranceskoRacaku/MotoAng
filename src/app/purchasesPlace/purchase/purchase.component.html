@@ -1,0 +1,69 @@
+<body>
+    
+
+
+    <!-- motors -->
+    <title> Purchases</title>
+
+    <div class ="motorsedit">
+
+        <!-- main motor -->
+        <div class="motor-info">
+            <!-- motor info  -->
+
+
+                <div class="motor-info-left">
+                    <h3> Purchase History </h3>
+                    <hr>
+                    <p> Id - {{purchase.id}}</p>
+                    <hr>
+                    <p> Amount - {{purchase.amount}}</p>
+                    <hr>
+                    <p> motor ID - {{purchase.motorId }}</p>
+                    <hr>
+                    <p> User ID - {{purchase.userId}} </p>
+
+
+                     <button mat-raised-button class="back-btn" style="color: rgb(5, 4, 1); background-color: rgb(255, 115, 22);" (click) = "sellMotor(purchase.id, createSell)">
+                        Sell
+                    </button>
+                     <button mat-raised-button class="back-btn" style="color: orange; background-color: black; float: left;" [routerLink]="['/users', purchase.userId]">
+                         Go Back
+                     </button>
+                    
+            </div>
+
+
+
+            <div *ngFor="let sell of sells">
+               <input [(ngModel)] ="createSell.amount"  type = "string" [value] = "purchase.amount" hidden/>
+               <input [(ngModel)] ="createSell.motorId"  type = "string" [value] = "purchase.motorId" hidden/>
+               <input [(ngModel)] ="createSell.userId"  type = "string" [value] = "purchase.userId" hidden/>
+               <input [(ngModel)] ="createSell.previousBalance"  type = "string" value = {{this.balance}} hidden/>
+            </div>
+
+
+
+
+            <img src='/assets/plain-arrow.png' class="investImg">
+           
+           <div *ngFor="let motor of motors"  id ="text">
+               <div *ngIf ="(purchase.motorId == motor.id)" >
+
+                <div class= "motorInfo">
+            <p>Motor Purchased:</p>
+            <h5> Motor ID: {{motor.id}} </h5>
+            <hr>
+            <!-- ID: <input [(ngModel)] ="motor.id" id ="inputText" type = "text" value = "" placeholder="e.g. (John Smith)"/> -->
+            <label>VIN: </label>
+            <input [(ngModel)] ="motor.vin" id ="inputText" disabled/>
+             <label>Make: </label>
+            <input [(ngModel)] ="motor.make" id ="inputText" disabled/>
+            <label>Type: </label>
+            <input [(ngModel)] ="motor.type" id ="inputText" disabled/>
+        </div>
+        </div>
+        </div> 
+    </div>
+    </div>
+    </body>

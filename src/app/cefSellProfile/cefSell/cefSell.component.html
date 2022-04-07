@@ -1,0 +1,78 @@
+<body>
+     
+ 
+    <div class="purchase">
+                       <h5>Account History</h5>
+                   </div>
+                   <div class="imagee">
+                     <img src='/assets/searchIcon.png' class ="imgg">
+                     <input type="text"  id="myInput" placeholder="Search for sells.." [(ngModel)]="term">
+
+                       </div>
+
+                       <div>
+                        <button class= "profileButton"  [routerLink]="['/cefProfile']">Back to Purchases</button>  
+                        
+                      </div>
+                       <div style="text-align:center">
+                        
+                         </div>
+             
+       
+                 <!-- <div class="grid-container" id="gridContainer">
+                   <div *ngFor="let sell of sells | filter:term | paginate: config " >
+       
+                       <a [routerLink]="['/sells', sell.id]"> ID- {{sell.id}} <br> Amount- {{sell.amount}}
+                           <br>Fund ID- {{sell.fundId}}
+                           </a>
+       </div> -->
+       
+       <div class="grid-container" id="gridContainer" >
+  
+        <table class="info-table">
+            <tr>
+                <!-- <th  scope ="col" [appSort]="funds" data-order="desc" data-name="id">
+                     ID
+                </th> --> 
+                <th tabindex ="0" role="button" scope ="col" >            
+                  <p> ID</p>
+               </th>
+               <th tabindex ="0" role="button" scope ="col" >            
+                 <p> Amount Sold</p>
+                </th>
+                <th tabindex ="0" role="button" scope ="col">            
+                  <p> Motor ID</p>
+                </th>
+                <th tabindex ="0" role="button" scope ="col" >            
+                  <p> User ID</p>
+                </th>
+
+
+                
+               
+            </tr>
+            <tr  *ngFor="let sell of sells | filter:term ">
+                <!-- <td>
+                     {{fund.id}}
+                </td> -->
+                <td>
+                     {{sell.id}}
+                </td>
+                <td>
+                  {{sell.amountSold}}
+                </td>
+                <td>
+                    {{sell.motorId}}
+                </td>
+                <td>
+                    {{sell.userId}}
+                </td>
+
+
+            </tr>
+            
+        </table>  </div>
+       
+       <div style="text-align:center">
+         
+       </div>      </body>
